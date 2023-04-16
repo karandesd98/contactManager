@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com" th:replace="userBase::layout(~{::section})">
+  <head>
+    
+  </head>
+  <body >
+   <section >
+      <script th:src="@{/script/viewContact.js}" ></script>
+    <!-- write your code here -->
+     <div class="container">
+        <div class="row">
+           <div class="col-md-20  ">
+              <div class="card" style="margin-top: 100px;">
+                  <div class="card-body">
+                    <div id="studentContact"></div>
+                    
+                    <!-- Modal --> 
+ <div class="modal fade  hidden" id="editContactModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Edit Contact</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="editContact"></div>
+      </div>
+      <div class="modal-footer">
+      <div id="modelFooter"></div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+                    
+                    
+                    
+                  </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  
+   </section>
+  </body>
+</html>

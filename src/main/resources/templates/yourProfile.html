@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com" th:replace="userBase::layout(~{::section})">
+  <head>
+    
+  </head>
+  <body>
+   <section>
+    <!-- write your code here -->
+     <script th:src="@{/script/yourProfile.js}" ></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 ">
+                   <div class="card" style="margin-top: 20px;">
+                      <div class="card-body">
+                          <div id="myProfile"></div>
+                          
+                       </div>
+                   </div>
+            </div>
+        </div>
+    </div>
+ 
+   </section>
+  </body>
+</html>

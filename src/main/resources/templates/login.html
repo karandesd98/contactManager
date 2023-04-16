@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com" th:replace="base::layout(~{::section})">
+  <head>
+    
+  </head>
+  <body>
+   <section>
+    <div class="container">
+      <div class="row">
+    		<div class="col-md-6 offset-md-3 ">
+    		  <div class="card" style="margin-top: 100px;">
+    		    <div class="card-body">
+    		    <h3 class="text-center">Login Heare!</h3>
+				<form  th:action="@{/doLogin}" method="post">
+				
+				<div th:if="${param.error}" class="text-danger">
+				invalid user name or password
+				</div>
+				
+					<div class="mb-3">
+						<label for="exampleInputEmail1" class="form-label">User Name</label>
+						<input type="text" name="username" class="form-control" id="userName" aria-describedby="emailHelp">
+					</div>
+					<div class="mb-3">
+						<label for="exampleInputPassword1" class="form-label">Password</label>
+						<input type="password" name="password" class="form-control" id="password">
+					</div>
+	               <div class="container text-center">			
+					<button type="submit" class="btn btn-primary text-center">Login</button>
+	               </div>
+				</form>
+    		    
+    		    </div>
+    		  </div>
+    		</div>
+      </div>
+    </div>
+
+   </section>
+  </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com" th:replace="userBase::layout(~{::section})">
+  <head>
+    
+  </head>
+  <body>
+   <section>
+   <script th:src="@{/script/addContactForm.js}"></script>
+  
+
+    <!-- write your code here -->
+	<div class="container">
+       <div class="row">
+          <div class="col-md-8 offset-md-2 ">
+         
+           <div class="card" style="margin-top: 15px;">
+    		    <div class="card-body">
+    		   
+    		     <h3 class="text-center">Add Contact Heare!</h3>
+    		    <form   method="post" enctype ="multipart/form-data">
+			
+				<div class="mb-3">
+						<label for="userName" class="form-label">User Name :</label>
+						<input type="text" name="username" class="form-control" id="userName" placeholder="Enter User Name" aria-describedby="emailHelp">
+				</div>
+				
+				<div class="mb-3">
+						<label for="nickName" class="form-label">Nick Name :</label>
+						<input type="text" name="nickName" class="form-control" id="nickName" placeholder="Enter User Name" aria-describedby="emailHelp">
+				</div>
+				
+				<div class="mb-3">
+						<label for="email" class="form-label">Email :</label>
+						<input type="email" name="email" class="form-control" id="email" placeholder="Enter Email Id" aria-describedby="emailHelp">
+				</div>
+				
+				<div class="mb-3">
+						<label for="phoneNumber" class="form-label">Phone Number :</label>
+						<input type="number" name="phoneNumber" class="form-control" id="phoneNumber" placeholder="Enter Phone Number" aria-describedby="emailHelp">
+				</div>
+				
+				<div class="mb-3">
+						<label for="work" class="form-label">Work :</label>
+						<input type="text" name="work" class="form-control" id="work" placeholder="Enter Work" aria-describedby="emailHelp">
+				</div>
+				
+				<div class="mb-3">
+						<label for="desc" class="form-label">Contact Description :</label>
+						<textarea name="desc" class="form-control" id="desc" placeholder="Enter Description" aria-describedby="emailHelp" ></textarea>  
+				</div>
+				
+				<div class="form-group">
+					<label for="imageUpload">Upload an Image:</label>
+					<input type="file" class="form-control-file" id="imageUpload">
+				</div>
+					
+	               <div class="container text-center">			
+					<button type="button" class="btn btn-primary text-center" onclick="saveContact()">Save</button>
+	                <button type="button" class="btn btn-primary text-center" onclick="uploadExcel()">Upload Excel</button>
+	               </div>
+	              
+				</form>
+				
+				<div id="uploadContatDiv"></div>
+				
+    		    </div>
+           </div>      
+          </div>
+       </div>
+    </div>
+
+   </section>
+  </body>
+</html>
